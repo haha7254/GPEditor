@@ -63,8 +63,11 @@
         {
           "name":"load wave",
           "item":["Action自動等比例切齊聲音", "聲音自動貼其Action"]
-          
-        }
+        },
+        {
+          "name":"自動提示4種模式",
+          "items":["(extend(property), stretch(re-cacl),shrink(re-cacl), truncate(property))", "wave form for multi-action(只有一組)", "wave form for single action"]
+        }        
       ]
     },
     {
@@ -179,18 +182,28 @@
             {"name":  "在某一點滾輪滑鼠時會對X axis進行縮放", "subItems": []},
             {"name":  "工作區域中單擊滑鼠", "subItems": ["select mode時會點出當前時間(x axis)", " pancil mode則會根據是line或是curve新增點型態"]},
             {"name":  "select模式", "subItems": ["點擊右鍵可選取範圍, 並可以使用draw functions"]},
-            {"name":  "pencil模式", "subItems": ["點擊右鍵為刪除點數"]}
-
-
+            {"name":  "pencil模式", "subItems": ["點擊右鍵為刪除點數"]},
+            {"name":  "horizontal ruler", "subItems": ["zoom in/out", "drag"]},
+            {"name":  "vertical ruler", "subItems": ["顯示百分比"]}
           ]
         },
         {
-          "name": "下排視窗",
+          "name": "Play Control視窗",
+          "subItems":["play", "pause", "loop(toggle)", "go to satart", "go to end", "stop"]
+        },
+        {
+          "name": "Status視窗",
           "subItems": [
-            {"name": "顯示當前時間位置(X axis)以及百分比(Y axis)"}
+            {"name": "顯示當前時間位置(X axis)以及百分比(Y axis)"},
+            {"name":"顯示wave form information(sample rate, sample數目)"}
           ]
         }
       ]
+  },
+  {
+    "special operation":[
+      {"name":  "action manager", "subItems": ["多選時 強制將select轉成pencil"]}
+    ]
   },
   "ContextMenu":{
     "item":["Draw functions","Edit functions"]
