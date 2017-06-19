@@ -2,7 +2,7 @@
   "id": "G+Editor",
   "Features": [
     {
-      "name": "Menu",
+      "name": "File",
       "items": [
         {
           "name": "New"
@@ -14,7 +14,7 @@
         "Import",
         "Export",
         "Recently Files"
-        .....
+   
       ]
     },
     {
@@ -30,7 +30,9 @@
         "Insert",
         "Pancel",
         "Line",
-        "Curve"
+        "Curve",
+        "Snapping", 
+        "Section crossing"
       ]
     },
     {
@@ -58,7 +60,11 @@
     {
       "name": "Wave function",
       "items": [
-        "load wave"
+        {
+          "name":"load wave",
+          "item":["Action自動等比例切齊聲音", "聲音自動貼其Action"]
+          
+        }
       ]
     },
     {
@@ -71,41 +77,130 @@
   "Layout": {
     "name": "視窗",
     "items":
-      [ {
+      [
+        {
+          "name": "Menu Bar",
+          "subItems":[
+                {
+                  "name": "File",
+                  "items": [
+                    {
+                      "name": "New", "subitem":["顯示設定Project name", "顯示設定Project location"]
+                    },
+                    {"name": "Open", "subitem":["開啟舊檔"]},
+                    {"name": "Save", "subitem":["存檔"]},
+                    "SaveAs",
+                    "Close",
+                    "Import",
+                    "Export",
+                    {"name": "Recently Files", "subitem":["列出歷史檔案"]}                    
+
+                  ]
+                },
+                {
+                  "name": "Edit",
+                  "items": [
+                    {"name": "Undo", "subItems": ["恢復上一步驟"]},
+                    {"name": "Redo", "subItems": ["恢復到下一步驟"]},                    
+                    {"name": "Cut", "subItems": ["剪下當前所選的聲音片段"]},                    
+                    {"name": "Copy", "subItems": ["複製當前所選的聲音片段"]},                    
+                    {"name": "Paste", "subItems": ["貼上當前所選的聲音片段"]},                    
+                    {"name": "Select", "subItems": ["選取模式(不能選點)"]},                    
+                    {"name": "Replace", "subItems": ["替換選取當前所選的聲音片段"]},                    
+                    {"name": "Insert", "subItems": []},                    
+                    {"name": "Pancel", "subItems": ["筆模式(可選點)"]},                  
+                    {"name": "Line", "subItems": ["在筆模式下新增的點為線"]},   
+                    {"name": "Curve", "subItems": ["在筆模式下新增的點為曲線"]}
+                    
+                  ]
+                },
+                {
+                  "name": "View",
+                  "items": [    
+                     {"name": "Zoom int", "subItems": []},       
+                     {"name": "Zoom out", "subItems": []}                     
+                  ]
+                },
+                {
+                  "name": "Draw function",
+                  "items": [
+                    "Invert",
+                    "Reverse",
+                    "offset",
+                    "Shift",
+                    "Level Low",
+                    "Level High",
+                    "Level Control",
+                    "Ascend",
+                    "Descend",
+                    "Flashing"
+                  ]
+                },
+                {
+                  "name": "Help",
+                  "items": [
+                    "about"
+                  ]
+                }            
+          ]
+        },        
+        {
           "name": "左側視窗",
-          "subItems": ["顯示多個Action視窗","顯示簡易wave",
-                        {"name:": "New Action", "items": ["修改Action名稱", "修改時間長度"]},
+          "subItems": [ "顯示多個Action視窗, 支援對個別Action視窗刪除",
+                        "顯示簡易wave",                        
+                        {"name:": "New Action", "items": ["跳出新增Action視窗","修改Action名稱", "修改時間長度"]},
                         "Delete Action",
-                        {"name": "Import", "items":["預覽視窗", "顯示import檔案資訊"]},
+                        {"name": "Import", "items":[["跳出import Action視窗", "預覽視窗", "顯示import檔案資訊"]},
                         "Export",
-                        {"Property:": "New Action", "items": ["修改當前Action名稱", "修改當前時間長度"]}
+                        {"Property:": "New Action", "items": ["修改當前Action名稱", "修改當前時間長度"]},
+                        "Action之間可以上下移動", 
+                        "Action可多選操作",
+                        "可以直接在左側欄位中刪除所選的Action",
+                        "Action選取後可將資料對應至中間工作視窗"                        
+                        
           ]
         },
         {
           "name": "上面視窗",
           "subItems": [
-            "顯示常用功能"
-
+            "顯示常用功能(檔案, 編輯, 選取模式, 點模式, draw functions)"
           ]
         },
         {
-          "name": "中間工作繪圖區域",
+          "name": "中間工作視窗",
           "subItems":[
-            {"name": "顯示插入聲音波型"}
+            {"name":  "顯示匯入聲音波型", "subItems":["顯示資訊(samples, smaple rate)"]},
+            {"name":  "可以對聲音以及當前Action進行zoom in/ out"},
+            {"name":  "顯示 Xaxis(時間ms)", "subItems": ["切成10等分(最大為屬性所設定的時間)", "可以做zoom in/out"]},
+            {"name":  "顯示 Yaxis(百分比)", "subItems": ["切成10等分(最大為100%)", "可以做zoom in/out"]},
+            {"name":  "支援右鍵跳出Draw function選單以及編輯選單", "subItems": []},
+            {"name":  "可以在工作區域拖曳出範圍選取視窗(有範圍)", "subItems": ["支援Draw funcitons", "支援Edit functions"]},
+            {"name":  "可以在工作區域拖曳出範圍選取視窗(無範圍, 單一點)", "subItems": ["支援Edit functions"]},
+            {"name":  "在某一點滾輪滑鼠時會對X axis進行縮放", "subItems": []},
+            {"name":  "工作區域中單擊滑鼠", "subItems": ["select mode時會點出當前時間(x axis)", " pancil mode則會根據是line或是curve新增點型態"]},
+            {"name":  "select模式", "subItems": ["點擊右鍵可選取範圍, 並可以使用draw functions"]},
+            {"name":  "pencil模式", "subItems": ["點擊右鍵為刪除點數"]}
+
 
           ]
         },
         {
           "name": "下排視窗",
           "subItems": [
-            {"name": "顯示當前時間位置(X axis)"}
+            {"name": "顯示當前時間位置(X axis)以及百分比(Y axis)"}
           ]
         }
       ]
   },
   "ContextMenu":{
-    
+    "item":["Draw functions","Edit functions"]
   },
+  "Shortcut":[
+    ""
+  ],
+  "future plans":[
+    "GP-color", "GP-Simulation"
+  ],
   "Environment": [
     "node.js",
     "electron",
@@ -121,6 +216,8 @@
   "Testing": [
     "Mocha"
   ],
+  "Build":["electron-packager"],
+  "Pack":["asar"],
   "File format": [
     ".gat",
     ".json"
