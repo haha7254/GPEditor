@@ -1,0 +1,133 @@
+{
+  "id": "G+Editor",
+  "Features": [
+    {
+      "name": "Menu",
+      "items": [
+        {
+          "name": "New"
+        },
+        "Open",
+        "Save",
+        "SaveAs",
+        "Close",
+        "Import",
+        "Export",
+        "Recently Files"
+        .....
+      ]
+    },
+    {
+      "name": "Edit",
+      "items": [
+        {"name": "Undo", "subItems": []},
+        "Redo",
+        "Cut",
+        "Copy",
+        "Paste",
+        "Select",
+        "Replace",
+        "Insert",
+        "Pancel",
+        "Line",
+        "Curve"
+      ]
+    },
+    {
+      "name": "View",
+      "items": [
+        "Zoom in",
+        "Zoom out"
+      ]
+    },
+    {
+      "name": "Draw function",
+      "items": [
+        "Invert",
+        "Reverse",
+        "offset",
+        "Shift",
+        "Level Low",
+        "Level High",
+        "Level Control",
+        "Ascend",
+        "Descend",
+        "Flashing"
+      ]
+    },
+    {
+      "name": "Wave function",
+      "items": [
+        "load wave"
+      ]
+    },
+    {
+      "name": "Help",
+      "items": [
+        "about"
+      ]
+    }
+  ],
+  "Layout": {
+    "name": "視窗",
+    "items":
+      [ {
+          "name": "左側視窗",
+          "subItems": ["顯示多個Action視窗","顯示簡易wave",
+                        {"name:": "New Action", "items": ["修改Action名稱", "修改時間長度"]},
+                        "Delete Action",
+                        {"name": "Import", "items":["預覽視窗", "顯示import檔案資訊"]},
+                        "Export",
+                        {"Property:": "New Action", "items": ["修改當前Action名稱", "修改當前時間長度"]}
+          ]
+        },
+        {
+          "name": "上面視窗",
+          "subItems": [
+            "顯示常用功能"
+
+          ]
+        },
+        {
+          "name": "中間工作繪圖區域",
+          "subItems":[
+            {"name": "顯示插入聲音波型"}
+
+          ]
+        },
+        {
+          "name": "下排視窗",
+          "subItems": [
+            {"name": "顯示當前時間位置(X axis)"}
+          ]
+        }
+      ]
+  },
+  "ContextMenu":{
+    
+  },
+  "Environment": [
+    "node.js",
+    "electron",
+    "gulp",
+    "webpack(option)"
+  ],
+  "Development": [
+    "Javascript",
+    "CSS",
+    "HTML5",
+    "d3.js(v4)"
+  ],
+  "Testing": [
+    "Mocha"
+  ],
+  "File format": [
+    ".gat",
+    ".json"
+  ],
+  "Database": [
+    "Object",
+    "MongoDB"
+  ],
+  "MultiChannel":{}
+}
