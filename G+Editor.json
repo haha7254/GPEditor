@@ -1,218 +1,350 @@
 {
-  "id": "G+Editor",
-  "Features": [
+  "name": "G+Editor",
+  "Layout": {
+    "name": "視窗",
+    "items": [
+      {
+        "name": "Menu Bar",
+        "Items": [
+          {
+            "name": "File",
+            "items": [
+              {
+                "name": "New",
+                "items": [
+                  "顯示設定Project name",
+                  "顯示設定Project location"
+                ]
+              },
+              {
+                "name": "Open",
+                "items": [
+                  "開啟舊檔"
+                ]
+              },
+              {
+                "name": "Save",
+                "items": [
+                  "存檔"
+                ]
+              },
+              "SaveAs",
+              "Close",
+              "Import",
+              "Export",
+              {
+                "name": "Recently Files",
+                "items": [
+                  "列出歷史檔案"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Edit",
+            "items": [
+              {
+                "name": "Undo",
+                "items": [
+                  "恢復上一步驟"
+                ]
+              },
+              {
+                "name": "Redo",
+                "items": [
+                  "恢復到下一步驟"
+                ]
+              },
+              {
+                "name": "Cut",
+                "items": [
+                  "剪下當前所選的聲音片段"
+                ]
+              },
+              {
+                "name": "Copy",
+                "items": [
+                  "複製當前所選的聲音片段"
+                ]
+              },
+              {
+                "name": "Paste",
+                "items": [
+                  "貼上當前所選的聲音片段"
+                ]
+              },
+              {
+                "name": "Select",
+                "items": [
+                  "選取模式(不能選點)"
+                ]
+              },
+              {
+                "name": "Replace",
+                "items": [
+                  "替換選取當前所選的聲音片段"
+                ]
+              },
+              {
+                "name": "Insert",
+                "items": []
+              },
+              {
+                "name": "Pancel",
+                "items": [
+                  "筆模式(可選點)"
+                ]
+              },
+              {
+                "name": "Line",
+                "items": [
+                  "在筆模式下新增的點為線"
+                ]
+              },
+              {
+                "name": "Curve",
+                "items": [
+                  "在筆模式下新增的點為曲線"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "View",
+            "items": [
+              {
+                "name": "Zoom in",
+                "items": []
+              },
+              {
+                "name": "Zoom out",
+                "items": []
+              }
+            ]
+          },
+          {
+            "name": "Draw function",
+            "items": [
+              "Invert",
+              "Reverse",
+              "offset",
+              "Shift",
+              "Level Low",
+              "Level High",
+              "Level Control",
+              "Ascend",
+              "Descend",
+              "Flashing"
+            ]
+          },
+          {
+            "name": "Help",
+            "items": [
+              "about",
+              "Update"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "左側視窗",
+        "items": [
+          "顯示多個Action視窗, 支援對個別Action視窗刪除",
+          "顯示簡易wave",
+          {
+            "name:": "New Action",
+            "items": [
+              "跳出新增Action視窗",
+              "修改Action名稱",
+              "修改時間長度"
+            ]
+          },
+          "Delete Action",
+          {
+            "name": "Import",
+            "items": [
+              "跳出import Action視窗",
+              "預覽視窗",
+              "顯示import檔案資訊"
+            ]
+          },
+          "Export",
+          {
+            "Property:": "New Action",
+            "items": [
+              "修改當前Action名稱",
+              "修改當前時間長度"
+            ]
+          },
+          "Action之間可以上下移動",
+          "Action可多選操作",
+          "可以直接在左側欄位中刪除所選的Action",
+          "Action選取後可將資料對應至中間工作視窗"
+        ]
+      },
+      {
+        "name": "上面視窗",
+        "items": [
+          "顯示常用功能(檔案, 編輯, 選取模式, 點模式, draw functions)"
+        ]
+      },
+      {
+        "name": "中間工作視窗",
+        "items": [
+          {
+            "name": "顯示匯入聲音波型",
+            "items": [
+              "顯示資訊(samples, smaple rate)"
+            ]
+          },
+          {
+            "name": "可以對聲音以及當前Action進行zoom in/ out"
+          },
+          {
+            "name": "顯示 Xaxis(時間ms)",
+            "items": [
+              "切成10等分(最大為屬性所設定的時間)",
+              "可以做zoom in/out"
+            ]
+          },
+          {
+            "name": "顯示 Yaxis(百分比)",
+            "items": [
+              "切成10等分(最大為100%)",
+              "可以做zoom in/out"
+            ]
+          },
+          {
+            "name": "支援右鍵跳出Draw function選單以及編輯選單",
+            "items": []
+          },
+          {
+            "name": "可以在工作區域拖曳出範圍選取視窗(有範圍)",
+            "items": [
+              "支援Draw funcitons",
+              "支援Edit functions"
+            ]
+          },
+          {
+            "name": "可以在工作區域拖曳出範圍選取視窗(無範圍, 單一點)",
+            "items": [
+              "支援Edit functions"
+            ]
+          },
+          {
+            "name": "在某一點滾輪滑鼠時會對X axis進行縮放",
+            "items": []
+          },
+          {
+            "name": "工作區域中單擊滑鼠",
+            "items": [
+              "select mode時會點出當前時間(x axis)",
+              " pancil mode則會根據是line或是curve新增點型態"
+            ]
+          },
+          {
+            "name": "select模式",
+            "items": [
+              "點擊右鍵可選取範圍, 並可以使用draw functions"
+            ]
+          },
+          {
+            "name": "pencil模式",
+            "items": [
+              "點擊右鍵為刪除點數"
+            ]
+          },
+          {
+            "name": "horizontal ruler",
+            "items": [
+              "zoom in/out",
+              "drag"
+            ]
+          },
+          {
+            "name": "vertical ruler",
+            "items": [
+              "顯示百分比"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Play Control視窗",
+        "items": [
+          {
+            "name": "play",
+            "items": [
+              "play時,波型會同時跟隨當前時間前進"
+            ]
+          },
+          "pause",
+          "loop(toggle)",
+          "go to satart",
+          "go to end",
+          "stop"
+        ]
+      },
+      {
+        "name": "Status視窗",
+        "items": [
+          {
+            "name": "顯示當前時間位置(X axis)以及百分比(Y axis)"
+          },
+          {
+            "name": "顯示wave form information(sample rate, sample數目)"
+          }
+        ]
+      }
+    ]
+  },
+  "special operation": [
     {
-      "name": "File",
+      "name": "action manager",
       "items": [
-        {
-          "name": "New"
-        },
-        "Open",
-        "Save",
-        "SaveAs",
-        "Close",
-        "Import",
-        "Export",
-        "Recently Files"
-   
-      ]
-    },
-    {
-      "name": "Edit",
-      "items": [
-        {"name": "Undo", "subItems": []},
-        "Redo",
-        "Cut",
-        "Copy",
-        "Paste",
-        "Select",
-        "Replace",
-        "Insert",
-        "Pancel",
-        "Line",
-        "Curve",
-        "Snapping", 
-        "Section crossing"
-      ]
-    },
-    {
-      "name": "View",
-      "items": [
-        "Zoom in",
-        "Zoom out"
-      ]
-    },
-    {
-      "name": "Draw function",
-      "items": [
-        "Invert",
-        "Reverse",
-        "offset",
-        "Shift",
-        "Level Low",
-        "Level High",
-        "Level Control",
-        "Ascend",
-        "Descend",
-        "Flashing"
+        "多選時 強制將select轉成pencil"
       ]
     },
     {
       "name": "Wave function",
       "items": [
         {
-          "name":"load wave",
-          "item":["Action自動等比例切齊聲音", "聲音自動貼其Action"]
-        },
-        {
-          "name":"自動提示4種模式",
-          "items":["(extend(property), stretch(re-cacl),shrink(re-cacl), truncate(property))", "wave form for multi-action(只有一組)", "wave form for single action"]
-        }        
-      ]
-    },
-    {
-      "name": "Help",
-      "items": [
-        "about"
-      ]
-    }
-  ],
-  "Layout": {
-    "name": "視窗",
-    "items":
-      [
-        {
-          "name": "Menu Bar",
-          "subItems":[
-                {
-                  "name": "File",
-                  "items": [
-                    {
-                      "name": "New", "subitem":["顯示設定Project name", "顯示設定Project location"]
-                    },
-                    {"name": "Open", "subitem":["開啟舊檔"]},
-                    {"name": "Save", "subitem":["存檔"]},
-                    "SaveAs",
-                    "Close",
-                    "Import",
-                    "Export",
-                    {"name": "Recently Files", "subitem":["列出歷史檔案"]}                    
-
-                  ]
-                },
-                {
-                  "name": "Edit",
-                  "items": [
-                    {"name": "Undo", "subItems": ["恢復上一步驟"]},
-                    {"name": "Redo", "subItems": ["恢復到下一步驟"]},                    
-                    {"name": "Cut", "subItems": ["剪下當前所選的聲音片段"]},                    
-                    {"name": "Copy", "subItems": ["複製當前所選的聲音片段"]},                    
-                    {"name": "Paste", "subItems": ["貼上當前所選的聲音片段"]},                    
-                    {"name": "Select", "subItems": ["選取模式(不能選點)"]},                    
-                    {"name": "Replace", "subItems": ["替換選取當前所選的聲音片段"]},                    
-                    {"name": "Insert", "subItems": []},                    
-                    {"name": "Pancel", "subItems": ["筆模式(可選點)"]},                  
-                    {"name": "Line", "subItems": ["在筆模式下新增的點為線"]},   
-                    {"name": "Curve", "subItems": ["在筆模式下新增的點為曲線"]}
-                    
-                  ]
-                },
-                {
-                  "name": "View",
-                  "items": [    
-                     {"name": "Zoom int", "subItems": []},       
-                     {"name": "Zoom out", "subItems": []}                     
-                  ]
-                },
-                {
-                  "name": "Draw function",
-                  "items": [
-                    "Invert",
-                    "Reverse",
-                    "offset",
-                    "Shift",
-                    "Level Low",
-                    "Level High",
-                    "Level Control",
-                    "Ascend",
-                    "Descend",
-                    "Flashing"
-                  ]
-                },
-                {
-                  "name": "Help",
-                  "items": [
-                    "about"
-                  ]
-                }            
-          ]
-        },        
-        {
-          "name": "左側視窗",
-          "subItems": [ "顯示多個Action視窗, 支援對個別Action視窗刪除",
-                        "顯示簡易wave",                        
-                        {"name:": "New Action", "items": ["跳出新增Action視窗","修改Action名稱", "修改時間長度"]},
-                        "Delete Action",
-                        {"name": "Import", "items":[["跳出import Action視窗", "預覽視窗", "顯示import檔案資訊"]},
-                        "Export",
-                        {"Property:": "New Action", "items": ["修改當前Action名稱", "修改當前時間長度"]},
-                        "Action之間可以上下移動", 
-                        "Action可多選操作",
-                        "可以直接在左側欄位中刪除所選的Action",
-                        "Action選取後可將資料對應至中間工作視窗"                        
-                        
+          "name": "load wave",
+          "items": [
+            "Action自動等比例切齊聲音",
+            "聲音自動貼其Action",
+            "wave顯示在背景 且可等比例跟隨編輯區域縮放"
           ]
         },
         {
-          "name": "上面視窗",
-          "subItems": [
-            "顯示常用功能(檔案, 編輯, 選取模式, 點模式, draw functions)"
-          ]
-        },
-        {
-          "name": "中間工作視窗",
-          "subItems":[
-            {"name":  "顯示匯入聲音波型", "subItems":["顯示資訊(samples, smaple rate)"]},
-            {"name":  "可以對聲音以及當前Action進行zoom in/ out"},
-            {"name":  "顯示 Xaxis(時間ms)", "subItems": ["切成10等分(最大為屬性所設定的時間)", "可以做zoom in/out"]},
-            {"name":  "顯示 Yaxis(百分比)", "subItems": ["切成10等分(最大為100%)", "可以做zoom in/out"]},
-            {"name":  "支援右鍵跳出Draw function選單以及編輯選單", "subItems": []},
-            {"name":  "可以在工作區域拖曳出範圍選取視窗(有範圍)", "subItems": ["支援Draw funcitons", "支援Edit functions"]},
-            {"name":  "可以在工作區域拖曳出範圍選取視窗(無範圍, 單一點)", "subItems": ["支援Edit functions"]},
-            {"name":  "在某一點滾輪滑鼠時會對X axis進行縮放", "subItems": []},
-            {"name":  "工作區域中單擊滑鼠", "subItems": ["select mode時會點出當前時間(x axis)", " pancil mode則會根據是line或是curve新增點型態"]},
-            {"name":  "select模式", "subItems": ["點擊右鍵可選取範圍, 並可以使用draw functions"]},
-            {"name":  "pencil模式", "subItems": ["點擊右鍵為刪除點數"]},
-            {"name":  "horizontal ruler", "subItems": ["zoom in/out", "drag"]},
-            {"name":  "vertical ruler", "subItems": ["顯示百分比"]}
-          ]
-        },
-        {
-          "name": "Play Control視窗",
-          "subItems":["play", "pause", "loop(toggle)", "go to satart", "go to end", "stop"]
-        },
-        {
-          "name": "Status視窗",
-          "subItems": [
-            {"name": "顯示當前時間位置(X axis)以及百分比(Y axis)"},
-            {"name":"顯示wave form information(sample rate, sample數目)"}
+          "name": "自動提示4種模式",
+          "items": [
+            "(extend(property), stretch(re-cacl),shrink(re-cacl), truncate(property))",
+            "wave form for multi-action(只有一組)",
+            "wave form for single action"
           ]
         }
       ]
-  },
-  {
-    "special operation":[
-      {"name":  "action manager", "subItems": ["多選時 強制將select轉成pencil"]}
+    }
+  ],
+  "ContextMenu": {
+    "item": [
+      "Draw functions",
+      "Edit functions"
     ]
   },
-  "ContextMenu":{
-    "item":["Draw functions","Edit functions"]
-  },
-  "Shortcut":[
+  "Shortcut": [
     ""
   ],
-  "future plans":[
-    "GP-color", "GP-Simulation"
+  "File format": [
+    {"format": ".gat", "items": "支援當前的gat格式"},
+    {"format": ".json","items": "支援json格式"}
+    
+  ],
+  "future plans": [
+    "MultiChannel",
+    "GP-color",
+    "GP-Simulation"
   ],
   "Environment": [
     "node.js",
@@ -229,15 +361,14 @@
   "Testing": [
     "Mocha"
   ],
-  "Build":["electron-packager"],
-  "Pack":["asar"],
-  "File format": [
-    ".gat",
-    ".json"
+  "Build": [
+    "electron-packager"
+  ],
+  "Pack": [
+    "asar"
   ],
   "Database": [
     "Object",
     "MongoDB"
-  ],
-  "MultiChannel":{}
+  ]
 }
